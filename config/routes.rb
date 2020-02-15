@@ -1,7 +1,3 @@
 Rails.application.routes.draw do
-  get 'pictures/index'
-  get 'pictures/create'
-  get 'pictures/destroy'
-  get 'pictures/show'
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  resources :pictures, only: [:show, :destroy, :index, :create]
 end
