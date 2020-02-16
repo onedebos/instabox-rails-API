@@ -21,7 +21,7 @@ by React Views.
 
 ## Front-end Repo
 
-[Front end git repo](https://github.com/onedebos/mentaLLy-frontend)
+[Front end git repo](https://github.com/onedebos/instabox-frontend)
 
 ## Getting Started
 
@@ -32,7 +32,7 @@ To get a local copy up and running follow these simple example steps.
 - git clone the frontend repo
 
 ```
-git clone https://github.com/onedebos/mentaLLy-frontend.git
+git clone https://github.com/onedebos/instabox-frontend
 ```
 
 - git clone the backend repo if you want to run the server on your local machine. Otherwise, skip the next 3 steps.
@@ -87,7 +87,7 @@ bundle install
 
 ### Usage
 
-- Api endpoint [here](https://mentallly-api.com/api/v1/providers)
+- Api endpoint [here](https://instabox-api.herokuapp.com/pictures)
 
 ### Run tests
 
