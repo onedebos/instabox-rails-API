@@ -1,6 +1,6 @@
 class PicturesController < ApplicationController
   # see line 37-38
-  before_action :set_picture, only: [:show, :destroy]
+  before_action :set_picture, only: [:show, :destroy, :update]
 
   
   def index
@@ -16,10 +16,17 @@ class PicturesController < ApplicationController
     render json: @picture, status: :created
   end
 
+  # allows us add or reduce likes from the front end
+  def update
+    @picture.update(picture_params)
+    head :no_content
+  end
+
   # deletes a picture
   def destroy
     @picture.destroy
     head :no_content
+    
   end
 
   # displays more info about a picture
@@ -31,7 +38,7 @@ class PicturesController < ApplicationController
     # In rails we need this method to allow us collect
     # information from the user to store in our DB
     def picture_params
-      params.permit(:img_link, :created_by, :caption, :likes, :liked)
+      params.permit(:img_link, :created_by, :caption, :likes, :liked, :id)
     end
 
     # we need to grab the id of the intended picture 
