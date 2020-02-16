@@ -7,7 +7,7 @@ default: &default
 
 development:
   <<: *default
-  database: instabox_api
+  database: instabox_api_development
 
 test:
   <<: *default
