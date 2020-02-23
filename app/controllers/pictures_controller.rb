@@ -18,8 +18,10 @@ class PicturesController < ApplicationController
 
   # allows us add or reduce likes from the front end
   def update
+    @pictures = Picture.all.order(created_at: :desc)
     @picture.update(picture_params)
-    head :no_content
+    render json: @pictures
+    # head :no_content
   end
 
   # deletes a picture

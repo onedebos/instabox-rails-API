@@ -15,7 +15,7 @@ class CommentsController < ApplicationController
   # POST pictures/pid/comments
   def create
     @picture.comments.create!(comment_params)
-    render json: @picture, status: :created
+    render json: @picture.comments, status: :created
   end
 
 
@@ -27,7 +27,7 @@ class CommentsController < ApplicationController
   # DELETE pictures/pid/comments/id
   def destroy
     @comment.destroy
-    head :no_content
+    render json: @picture.comments
   end
 
   private
